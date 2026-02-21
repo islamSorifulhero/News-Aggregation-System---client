@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 const API_BASE = "http://localhost:5000/api";
 
-// ─── UTILS ────────────────────────────────────────────────────────────────
+// ─── UTILS ─
 const formatDate = (d) => {
   if (!d) return "Unknown";
   return new Date(d).toLocaleDateString("en-US", {
@@ -16,7 +16,7 @@ const LANGUAGE_NAMES = {
   hi: "Hindi", bn: "Bengali", ru: "Russian", it: "Italian",
 };
 
-// ─── COMPONENTS ──────────────────────────────────────────────────────────
+// ─── COMPONENTS ─
 
 function StatusBar({ status }) {
   if (!status) return null;
@@ -189,7 +189,7 @@ function Pagination({ page, totalPages, onPage }) {
   );
 }
 
-// ─── MAIN APP ─────────────────────────────────────────────────────────────
+// ─── MAIN APP ──
 const defaultFilters = {
   search: "", startDate: "", endDate: "", author: "",
   language: [], country: [], category: [], datatype: "",
@@ -630,25 +630,3 @@ export default function App() {
     </>
   );
 }
-
-
-
-
-
-// import React from "react";
-// import { RouterProvider } from "react-router-dom";
-// import router from "./routes/router.jsx";
-// import { ThemeProvider } from "./context/ThemeContext.jsx";
-// import AuthProviders from "./context/AuthProviders.jsx";
-
-// const App = () => {
-//   return (
-//     <ThemeProvider>
-//       <AuthProviders>
-//         <RouterProvider router={router} />
-//       </AuthProviders>
-//     </ThemeProvider>
-//   );
-// };
-
-// export default App;
